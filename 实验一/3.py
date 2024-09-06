@@ -33,9 +33,9 @@ def display_cards(player_cards):
     :param player_cards: list, 13x4的二维字符串列表，保存4个玩家的发牌情况
     """
     players = ['玩家E', '玩家S', '玩家W', '玩家N']
+    # 每张牌格式化到 4 个字符宽度（如 ♣A 会变成 "♣A  "，♣10 会变成 "♣10 "）
     for i in range(4):
-        # 每个玩家的牌显示在一行
-        player_hand = [player_cards[j][i] for j in range(13)]
+        player_hand = [card.ljust(4) for card in [player_cards[j][i] for j in range(13)]]
         print(f"{players[i]}: {' '.join(player_hand)}")
 
 # 示例运行
