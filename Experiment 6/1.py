@@ -1,7 +1,6 @@
 def parkingDilemma(cars:list[int], k:int)->int:
     """
     计算能覆盖k辆车的最小停车棚长度。
-    
     :param cars: 停车位置的列表。
     :param k: 需要覆盖的车数量。
     :return: 最小停车棚长度。

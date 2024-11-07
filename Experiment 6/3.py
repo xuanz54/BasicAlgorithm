@@ -1,7 +1,6 @@
 def longestIncreasingContinuousSubsequence(nums:list[int])->int:
     """
     找到最长上升连续子序列的长度（从左到右或从右到左）。
-    
     :param nums: 数组，包含整数。
     :return: 最长上升连续子序列的长度。
     """
@@ -16,7 +15,6 @@ def longestIncreasingContinuousSubsequence(nums:list[int])->int:
         else:
             cur_len_lr = 1
         max_len_lr = max(max_len_lr, cur_len_lr)
-
     # 计算右到左的最长子序列
     max_len_rl = 1
     cur_len_rl = 1

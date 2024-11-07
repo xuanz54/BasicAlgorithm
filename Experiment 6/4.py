@@ -1,13 +1,12 @@
 def tictactoe(moves:list[list[int]])->str:
     """
     根据给定的井字棋步数判断比赛结果。
-    
     :param moves: 每个玩家的步数列表，形式为[row, col]。
     :return: 返回比赛结果："A", "B", "Draw", 或 "Pending"。
     """
     # 初始化3x3的棋盘
     grid = [[None for _ in range(3)] for _ in range(3)]
-    
+
     # 依次落子
     for i, (row, col) in enumerate(moves):
         player = 'A' if i % 2 == 0 else 'B'
